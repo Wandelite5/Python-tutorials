@@ -36,3 +36,60 @@ x, y, z = 1, 2, 3
 print(x, y, z)
 x, y = y, x
 print(x, y, z)
+
+# Example 4
+values = 1, 2, 3
+print (values)
+x, y, z = values
+print(x)
+
+# Example 5
+scoundrel = {'name': 'Robin', 'girlfriend': 'Marion'}
+key, value = scoundrel.popitem()
+print(key, end = ' ')
+print(value)
+
+#  The sequence you unpack must have exactly as many items as the targets you list on the left of the = sign; otherwise, Python raises an exception when the assignment is performed.
+x, y, *z = 1, 2
+print(z)
+
+a, b, *rest = [1, 2, 3, 4]
+print(rest)
+
+name = "Albus Percival Wulfric Brian Dumbledore"
+first, middle, *last = name.split()
+print (last)
+
+# The right-hand side of the assignment may be any kind of sequence, but the starred variable will always end up containing a list.
+a, *b, c = "abc"
+print(a, b, c)
+
+# Augmented Assignments
+x = 2
+x += 1
+x *= 2
+print(x)
+
+fnord = 'foo'
+fnord += 'bar'
+fnord *= 2
+print(fnord)
+
+# Boolean Values
+print(True == 1)
+print(False == 0)
+print(True + False + 42)
+
+x = bool('I think, therefore I am')
+print(x)
+print(bool(0))
+
+name = input('What is your name? ')
+if name.endswith('Gumby'):
+    print('Hello, Mr. Gumby')
+else:
+    print('Hello, stranger')
+
+
+
+

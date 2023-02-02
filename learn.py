@@ -1,10 +1,12 @@
 format = "Hello, %s. %s enough for ya?"
 values = ('world', 'Hot')
 print( format % values)
+
 # example 3
 from math import pi 
 msg = "{name} is approximately {value:.2f}." .format(name="π", value=pi)
 print(msg)
+
 # example 4 
 months = ['January', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept', 'Oct', 'Nov', 'Dec']
 endings = ['st', 'nd', 'rd'] + 17 * ['th'] \
@@ -41,3 +43,20 @@ print(fmt.format('Dried Apricots (16 oz.)', 8))
 print(fmt.format('Prunes (4 lbs.)', 12))
 
 print('=' * width)
+
+# Prints a sentence in a centered "box" of correct width
+
+Sentence = input("enter text: ")
+
+screen_width = 80
+text_width = len(Sentence)
+Box_width = (text_width+4)
+left_margin = (screen_width - Box_width) // 2
+
+print()
+print(' ' * left_margin + '+' + '-' * (Box_width-2) +  '+')
+print(' ' * left_margin + '| ' + ' ' * (text_width) + ' |')
+print(' ' * left_margin + '| ' + Sentence + ' |' ) 
+print(' ' * left_margin + '| ' + ' ' * (text_width) + ' |')
+print(' ' * left_margin + '+' + '-' * (Box_width-2) +  '+')
+print()
