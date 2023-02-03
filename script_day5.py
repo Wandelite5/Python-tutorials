@@ -90,7 +90,90 @@ if name.endswith('Gumby'):
 else:
     print('Hello, stranger')
 
-#
+status = "friend" if name.endswith("Gumby") else "stranger"
+print(status)
+
+# elif clauses
+num = int(input('Enter a number: '))
+if num > 0:
+    print('The number is positive')
+elif num < 0:
+    print('The number is negative')
+else:
+    print('The number is zero')
+
+# Nesting Blocks
+name = input('What is your name? ')
+if name.endswith('Gumby'):
+    if name.startswith('Mr.'):
+        print('Hello, Mr. Gumby')
+    elif name.startswith('Mrs.'):
+        print('Hello, Mrs. Gumby')
+    else:
+        print('Hello, Gumby')
+else:
+    print('Hello, stranger')
+
+# is: The Identity Operator
+x = y = [1, 2, 3]
+z = [1, 2, 3]
+print(x == y)
+print(x == z)
+print(x is y)
+print(x is z)
+
+# Example
+x = [1, 2, 3]
+y = [2, 4]
+print(x is not y)
+del x[2]
+y[1] = 1
+y.reverse()
+print(x == y)
+print(x is y)
+
+# in: The Membership Operator
+name = input('What is your name?')
+if 's' in name:
+    print('Your name contains the letter "s".')
+else:
+    print('Your name does not contain the letter "s".')
+
+# String and Sequence Comparisons
+print(chr(128584))
+print(chr(128585))
+print(ord("🙉"))
+
+print("a" < "b")
+print("a" < "B")
+print("a".lower() < "B".lower())
+
+# other sequence
+print([1, 2] < [2, 1])
+
+# write a program that reads a number and checks whether it’s
+# between 1 and 10 (inclusive)
+number = int(input("enter number between 1 to 10: "))
+if number >=1 and number <=10: #(or use if 1 <= number <= 10:)
+    print("Great!")
+else:
+    print("Wrong!")
+
+# Assertion 
+#age = -1
+#assert 0 < age < 100, 'The age must be realistic'
+#print(age)
+
+# while Loops
+# print out all the numbers from 1 to 100
+num = 1
+while num <= 100:
+    print(num)
+    num += 1 #(or use num = num + 1)
+
+
+
+
 
 
 
