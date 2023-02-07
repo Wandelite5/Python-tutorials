@@ -169,11 +169,122 @@ else:
 num = 1
 while num <= 100:
     print(num)
-    num += 1 #(or use num = num + 1)
+    num += 1 #(in place of the augumented assignment, use num = num + 1)
 
+# Example
+name = ''
+while not name or name.isspace():
+    name = input('Please enter your name: ')
+print('Hello, {}!'.format(name))
 
+# For Loops
+words = ['this', 'is', 'an', 'ex', 'parrot']
+for word in words:
+    print(word)
 
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for number in numbers:
+    print(number)
 
+# Range 
+print(range(0, 10))
+print(list(range(0, 100)))
 
+for number in range(1,101):
+   print(number)
 
+# Iterating Over Dictionaries
+d = {'x': 1, 'y': 2, 'z': 3}
+for key in d:
+    print(key, 'corresponds to', d[key])
 
+# using item method
+d = {'x': 1, 'y': 2, 'z': 3}
+for key, value in d.items():
+    print(key, 'corresponds to', value)
+
+# Parallel Iteration
+names = ['anne', 'beth', 'george', 'damon']
+ages = [12, 45, 32, 102]
+for i in range(len(names)):
+    print(names[i], 'is', ages[i], 'years old')
+
+# Zip function 
+print(list(zip(names, ages)))
+for name, age in zip(names, ages):
+    print(name, 'is', age, 'years old')
+
+print(list(zip(range(5), range(100000000))))
+
+# Reversed and Sorted Iteration
+print(sorted([4, 3, 6, 8, 3]))
+print(sorted('Hello, world!'))
+print(list(reversed('Hello, world!')))
+print(''.join(reversed('Hello, world!')))
+
+#break 
+#say you wanted to find the largest square (the result of an integer multiplied by itself ) below 100. 
+# Then you start at 100 and iterate downward to 0. When you’ve found a square, there’s no need to continue, so you simply break out of the loop.
+from math import sqrt
+for n in range(99, 0, -1):
+    root = sqrt(n)
+    if root == int(root):
+       print(n)
+       break
+
+#example
+for i in range(0, 10, 1):
+    print(i)
+
+#The while True/break Idiom
+while True:
+    word = input('Please enter a word: ')
+    if not word: break
+# do something with the word:
+    print('The word was ', word)
+
+# from math import sqrt
+for n in range(99, 81, -1):
+    root = sqrt(n)
+    if root == int(root):
+        print(n)
+        break
+    else:
+        print("Didn't find it!")
+
+#List Comprehension 
+print([x * x for x in range(10) if x % 3 == 0])
+print([x * x for x in range(10)])
+
+# 
+print([(x, y) for x in range(3) for y in range(3)])
+girls = ['alice', 'bernice', 'clarice']
+boys = ['chris', 'arnold', 'bob']
+print([b + '+' + g for b in boys for g in girls if b[0] == g[0]])
+
+# OR
+
+girls = ['alice', 'bernice', 'clarice']
+boys = ['chris', 'arnold', 'bob']
+letterGirls = {}
+for girl in girls:
+    letterGirls.setdefault(girl[0], []). append(girl)
+print([b+'+'+g for b in boys for g in letterGirls[b[0]]])
+print(letterGirls)
+
+# dictionary comprhension 
+squares = {i:"{} squared is {}".format(i, i**2) for i in range(10)}
+print(squares[7])
+
+# exec fuction 
+from math import sqrt
+scope = {}
+exec('sqrt = 1', scope)
+print(sqrt(4))
+print(scope['sqrt'])
+print(len(scope))
+print(scope.keys())
+
+# eval function 
+print(eval(input("Enter an arithmetic expression: ")))
+         
