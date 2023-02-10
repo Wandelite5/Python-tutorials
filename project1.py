@@ -1,3 +1,10 @@
+student_scores = []
+while(True):
+    grade = input('enter testscores and say "done" to calculate the grades: ')
+    if grade == "done":
+        break
+    student_scores.append(float(grade))
+
 def calculate_grades(scores):
   grades = []
   for score in scores:
@@ -14,7 +21,6 @@ def calculate_grades(scores):
 def calculate_average(scores):
   return round(sum(scores) / len(scores))
 
-student_scores = [100, 10, 20, 90, 50, 88]
 student_grades = calculate_grades(student_scores)
 class_average = calculate_average(student_scores)
 

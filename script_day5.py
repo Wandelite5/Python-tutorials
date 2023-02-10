@@ -287,4 +287,13 @@ print(scope.keys())
 
 # eval function 
 print(eval(input("Enter an arithmetic expression: ")))
-         
+
+# Example
+scope = {}
+scope['x'] = 2
+scope['y'] = 3
+print(eval('x * y', scope))
+
+scope = {}
+print(exec('x = 2', scope))
+print(eval('x * x', scope))
